@@ -52,4 +52,5 @@ public/
 
 ## Contributors
 
-- **Aonyendo Paul Neteish** — Content, design direction, project owner
+- **Aonyendo Paul Neteish** ([@NitPaul](https://github.com/NitPaul)) — Content, design direction, project owner
+- **Ehsanul Haque Siam** ([@EhsanulHaqueSiam](https://github.com/EhsanulHaqueSiam)) — Development, design implementation
