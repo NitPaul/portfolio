@@ -59,20 +59,6 @@ const awards = [
   },
 ];
 
-const certifications = [
-  {
-    name: "Data Science & Machine Learning with Python",
-    issuer: "Ostad — Data Science 38 Batch",
-  },
-  {
-    name: "Python (Django)",
-    issuer: "EDGE Project, Bangladesh Computer Council, ICT Division",
-  },
-  {
-    name: "Data Entry Project Certification",
-    issuer: "BMIT Solutions LTD",
-  },
-];
 
 export default function Education() {
   const { ref, isVisible } = useScrollReveal();
@@ -191,68 +177,40 @@ export default function Education() {
                 </div>
               </div>
 
-              {/* Awards + Certifications */}
-              <div className="space-y-8">
-                {/* Awards */}
-                <div>
-                  <p className="font-mono text-text-muted text-xs uppercase tracking-wider mb-4">
-                    {"// "}Awards & Honors
-                  </p>
-                  <div className="space-y-3">
-                    {awards.map((award, i) => {
-                      const Icon = award.icon;
-                      return (
-                        <motion.div
-                          key={award.title}
-                          className="glass-card p-4 flex items-start gap-3"
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                          transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
-                        >
-                          <Icon
-                            size={16}
-                            className="text-accent-amber mt-0.5 flex-shrink-0"
-                          />
-                          <div className="flex-1">
-                            <p className="text-text-primary text-sm font-semibold">
-                              {award.title}
-                            </p>
-                            <p className="text-text-muted text-xs font-mono">
-                              {award.detail}
-                            </p>
-                          </div>
-                          <span className="text-text-muted text-[10px] font-mono flex-shrink-0">
-                            {award.year}
-                          </span>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Certifications */}
-                <div>
-                  <p className="font-mono text-text-muted text-xs uppercase tracking-wider mb-4">
-                    {"// "}Certifications
-                  </p>
-                  <div className="space-y-3">
-                    {certifications.map((cert, i) => (
+              {/* Awards */}
+              <div>
+                <p className="font-mono text-text-muted text-xs uppercase tracking-wider mb-4">
+                  {"// "}Awards & Honors
+                </p>
+                <div className="space-y-3">
+                  {awards.map((award, i) => {
+                    const Icon = award.icon;
+                    return (
                       <motion.div
-                        key={cert.name}
-                        className="glass-card p-4"
+                        key={award.title}
+                        className="glass-card p-4 flex items-start gap-3"
                         initial={{ opacity: 0, x: 20 }}
                         animate={isVisible ? { opacity: 1, x: 0 } : {}}
-                        transition={{ duration: 0.5, delay: 0.4 + i * 0.08 }}
+                        transition={{ duration: 0.5, delay: 0.2 + i * 0.08 }}
                       >
-                        <p className="text-text-primary text-sm font-semibold mb-1">
-                          {cert.name}
-                        </p>
-                        <p className="text-text-muted text-xs font-mono">
-                          {cert.issuer}
-                        </p>
+                        <Icon
+                          size={16}
+                          className="text-accent-amber mt-0.5 flex-shrink-0"
+                        />
+                        <div className="flex-1">
+                          <p className="text-text-primary text-sm font-semibold">
+                            {award.title}
+                          </p>
+                          <p className="text-text-muted text-xs font-mono">
+                            {award.detail}
+                          </p>
+                        </div>
+                        <span className="text-text-muted text-[10px] font-mono flex-shrink-0">
+                          {award.year}
+                        </span>
                       </motion.div>
-                    ))}
-                  </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
